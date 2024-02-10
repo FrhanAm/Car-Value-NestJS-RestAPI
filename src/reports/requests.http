@@ -1,0 +1,24 @@
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "make": "toyota",
+    "model": "gt86",
+    "year": 2010,
+    "mileage": 100000,
+    "lng": 0,
+    "lat": 0,
+    "price": 100000
+}
+
+
+### Approve an existing report
+PATCH http://localhost:3000/reports/7
+Content-Type: application/json
+
+{
+    "approved": true
+}
+
+### Get an estimate for an existing vehicle
+GET http://localhost:3000/reports?make=toyota&model=gt86&lng=0&lat=0&mileage=20000&year=2009
